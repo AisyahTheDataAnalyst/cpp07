@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 09:37:07 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/10 19:53:45 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:59:43 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,6 +160,7 @@ void testIterNonConst(const std::string &title, const char *colour, T *array, si
 	std::cout << "\nUppercasing values: ";		
 	iter(array, len, uppercase);
 	iter(array, len, printChar);
+	testIterConst("", colour, array, len);
 	std::cout << std::endl;
 }
 

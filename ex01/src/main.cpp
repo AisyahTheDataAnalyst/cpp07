@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 09:36:47 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/10 19:49:54 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:38:04 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main()
 }
 
 
-// >> OLD MESSY INT MAIN <<
+// // >> OLD MESSY INT MAIN <<
 // int main()
 // {
 // 	{
@@ -54,7 +54,7 @@ int main()
 // 		size_t intArrSize = sizeof(a)/sizeof(a[0]);
 // 		std::string b 	= "bBbB";
 // 		char c[]		= "cccC";  // local array = modifiable
-// 		char *d 		= "dDdd";  // string literal = cannot ve modifiedconst char * = read-only
+// 		// char *d 		= "dDdd";  // string literal = cannot ve modifiedconst char * = read-only
 		
 // 		nonBorder("INTERGER ARRAY", LIGHT_BLUE);
 // 		std::cout << "Original values   : ";
@@ -71,6 +71,41 @@ int main()
 // 		std::cout << "\nUppercasing values: ";		
 // 		iter(a, intArrSize, uppercase);
 // 		iter(a, intArrSize, printChar);
+// 		std::cout << std::endl;
+
+// 		nonBorder("STD::STRING", LIGHT_MAGENTA);
+// 		std::cout << "Original values   : ";
+// 		iter(&b[0], b.size(), printChar);
+// 		std::cout << "\nIncremented values: ";
+// 		iter(&b[0], b.size(), increment);
+// 		iter(&b[0], b.size(), printChar);
+// 		std::cout << "\nDecremented values: ";
+// 		iter(&b[0], b.size(), decrement);
+// 		iter(&b[0], b.size(), printChar);
+// 		std::cout << "\nLowercasing values: ";		
+// 		iter(&b[0], b.size(), lowercase);
+// 		iter(&b[0], b.size(), printChar);
+// 		std::cout << "\nUppercasing values: ";		
+// 		iter(&b[0], b.size(), uppercase);
+// 		iter(&b[0], b.size(), printChar);
+// 		std::cout << std::endl;
+
+// 		nonBorder("CHAR []", LIGHT_GREEN);
+// 		std::cout << "Original values   : ";
+// 		iter(c, strlen(c), printChar);
+// 		std::cout << "\nIncremented values: ";
+// 		iter(c, strlen(c), increment);
+// 		iter(c, strlen(c), printChar);
+// 		std::cout << "\nDecremented values: ";
+// 		iter(c, strlen(c), decrement);
+// 		iter(c, strlen(c), printChar);
+// 		std::cout << "\nLowercasing values: ";		
+// 		iter(c, strlen(c), lowercase);
+// 		iter(c, strlen(c), printChar);
+// 		std::cout << "\nUppercasing values: ";		
+// 		iter(c, strlen(c), uppercase);
+// 		iter(c, strlen(c), printChar);
+// 		std::cout << std::endl;
 // 	}
 // 	{
 // 		border("Constant template", PURPLE);
@@ -83,27 +118,22 @@ int main()
 
 // 		nonBorder("ISNOTALPHA", LIGHT_BLUE);
 // 		std::cout << "Original values: ";
-// 		iter(a, 3, printChar);
+// 		iter(a, intArrSize, printChar);
 // 		std::cout << "\nisNotAlpha check: ";
-// 		iter(a, 3, charIsAlpha);
+// 		iter(a, intArrSize, charIsAlpha);
 
 // 		nonBorder("ISNOTDIGIT", LIGHT_MAGENTA);
 // 		std::cout << "Original values [1]: ";
-// 		iter(b, 3, printChar);
+// 		iter(&b[0], b.size(), printChar);
 // 		std::cout << "\nisNotDigitInt check [1]: ";
-// 		iter(b, 3, charIsDigit);
-// 		std::cout << "All good!";
-// 		std::cout << "\nOriginal values [2]: ";
-// 		iter(&c[0], c.size(), printChar);
-// 		std::cout << "\nisNotDigitAscii check [2]: ";
-// 		iter(&c[0], c.size(), charIsDigit);
+// 		iter(&b[0], b.size(), charIsDigit);
 // 		std::cout << "All good!";
 
 // 		nonBorder("ISNOTALNUM", LIGHT_GREEN);
 // 		std::cout << "Original values: ";
-// 		iter(d, strlen(d), printChar);
+// 		iter(c, strlen(c), printChar);
 // 		std::cout << "\nisNotAlnum check: ";
-// 		iter(d, strlen(d), charIsAlnum);
+// 		iter(c, strlen(c), charIsAlnum);
 // 		std::cout << "All good!" << std::endl;
 // 	}
 // 	return 0;
