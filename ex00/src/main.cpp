@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:34 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/10 09:29:17 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/11/10 09:34:41 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,21 @@ int main()
 	// 	<< "a: " << a << '\n' 
 	// 	<< "b: " << b << std::endl;
 	// }
-	
+	{
+		border("int main given from the subject", YELLOW);
+		int a = 2;
+		int b = 3;
+		::swap( a, b );
+		std::cout << "a = " << a << ", b = " << b << std::endl;
+		std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+		std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+		std::string c = "chaine1";
+		std::string d = "chaine2";
+		::swap(c, d);
+		std::cout << "c = " << c << ", d = " << d << std::endl;
+		std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+		std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	}
 	{
 		border("Swap [std::string]", CYAN);
 		std::string a = "HELLO";
