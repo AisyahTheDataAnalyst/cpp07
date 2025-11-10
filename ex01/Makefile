@@ -6,11 +6,11 @@
 #    By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 12:20:17 by aimokhta          #+#    #+#              #
-#    Updated: 2025/11/10 08:36:00 by aimokhta         ###   ########.fr        #
+#    Updated: 2025/11/10 15:01:47 by aimokhta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex01
 
 CC = c++
 
@@ -50,7 +50,6 @@ $(OBJ_FOLDER)/%.o : %.cpp
 
 clean:
 	rm -rf $(OBJ_FOLDER)
-	rm -rf *_shrubbery
 	@echo "${GREEN}----------CLEANED----------\n${RESET}"
 
 fclean : clean
