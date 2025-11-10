@@ -6,7 +6,7 @@
 #    By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 12:20:17 by aimokhta          #+#    #+#              #
-#    Updated: 2025/11/10 15:01:47 by aimokhta         ###   ########.fr        #
+#    Updated: 2025/11/10 19:29:57 by aimokhta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ INC = -I$(INC_DIR)
 SRC_DIR = src
 
 SRC =	$(addprefix $(SRC_DIR)/, \
-		main.cpp )
+		main.cpp \
+		utils.cpp )
 
 OBJ_FOLDER = obj_files
 
