@@ -6,11 +6,11 @@
 #    By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 12:20:17 by aimokhta          #+#    #+#              #
-#    Updated: 2025/12/01 21:39:38 by aimokhta         ###   ########.fr        #
+#    Updated: 2025/12/02 00:31:42 by aimokhta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex02
 
 CC = c++
 
@@ -24,7 +24,7 @@ CFLAG = -Wall -Werror -Wextra -std=c++98 -g -O0 #-fsanitize=address
 # INC = -I$(INC_DIR)
 SRC_DIR = src
 
-SRC =	main.cpp 
+SRC =	main.cpp
 
 OBJ_FOLDER = obj_files
 
@@ -50,7 +50,6 @@ $(OBJ_FOLDER)/%.o : %.cpp
 
 clean:
 	rm -rf $(OBJ_FOLDER)
-	rm -rf *_shrubbery
 	@echo "${GREEN}----------CLEANED----------\n${RESET}"
 
 fclean : clean
