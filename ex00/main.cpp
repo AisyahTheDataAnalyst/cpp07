@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:34 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 00:16:57 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 01:22:49 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@ void border(const std::string &title, const char *colour)
 	<< RESET << std::endl;
 }
 
+
+
+// ==================================================================
+// |                       my own tests								|
+// ==================================================================
+
+# if 1
 int main()
 {
 	// >>> !!! SWAP CANNOT OVERWRITE CONSTS !!! <<<
@@ -40,21 +47,6 @@ int main()
 	// 	<< "a: " << a << '\n' 
 	// 	<< "b: " << b << std::endl;
 	// }
-	{
-		border("int main given from the subject", YELLOW);
-		int a = 2;
-		int b = 3;
-		swap( a, b );
-		std::cout << "a = " << a << ", b = " << b << std::endl;
-		std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-		std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-		std::string c = "chaine1";
-		std::string d = "chaine2";
-		swap(c, d);
-		std::cout << "c = " << c << ", d = " << d << std::endl;
-		std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-		std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-	}
 	{
 		border("Swap [std::string]", CYAN);
 		
@@ -108,6 +100,16 @@ int main()
 		<< "min = " << min(a, b) << std::endl; 
 	}
 	{
+		border("Min & Max [mix const int]", PURPLE);
+		const int a = 500;
+		int b = 300;
+		std::cout 
+		<< "const a = " << a << '\n'
+		<< "b = " << b << '\n'
+		<< "max = " << max(a, b) << '\n'
+		<< "min = " << min(a, b) << std::endl; 
+	}
+	{
 		border("Min & Max [char]", PURPLE);
 		char a = 'a';
 		char b = 'z';
@@ -127,5 +129,71 @@ int main()
 		<< "max = " << max(a, b) << '\n'
 		<< "min = " << min(a, b) << std::endl; 
 	}
+	{
+		border("Min & Max [mix const char]", PURPLE);
+		const char a = '!';
+		char b = '~';
+		std::cout 
+		<< "const a = '" << a << "'\n"
+		<< "b = '" << b << "'\n"
+		<< "max = " << max(a, b) << '\n'
+		<< "min = " << min(a, b) << std::endl; 
+	}
 	return 0;
 }
+#endif
+
+
+
+// ===========================================================================
+// |						evaluation sheet's given test                    |
+// ===========================================================================
+#if 0
+class Awesome
+{
+  public:
+    Awesome(void) : _n(0) {}
+    Awesome( int n ) : _n( n ) {}
+    Awesome & operator= (Awesome & a) { _n = a._n; return *this; }
+    bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+    bool operator!=( Awesome const & rhs ) const{ return (this->_n != rhs._n); }
+    bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+    bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+    bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+    bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+    int get_n() const { return _n; }
+  private:
+    int _n;
+};
+std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
+
+int main(void)
+{
+	{
+		border("int main given from the evaluation sheet", YELLOW);
+		Awesome a(2), b(4);
+
+        swap(a, b);
+        std::cout << a << " " << b << std::endl;
+        std::cout << max(a, b) << std::endl;
+        std::cout << min(a, b) << std::endl;
+	}
+	{
+		border("int main given from the subject", YELLOW);
+		int a = 2;
+		int b = 3;
+		swap( a, b );
+		std::cout << "a = " << a << ", b = " << b << std::endl;
+		std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+		std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+		std::string c = "chaine1";
+		std::string d = "chaine2";
+		swap(c, d);
+		std::cout << "c = " << c << ", d = " << d << std::endl;
+		std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+		std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+
+	}
+	return 0;
+}
+#endif

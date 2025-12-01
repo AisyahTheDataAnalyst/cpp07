@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:11:19 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 00:31:17 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 01:24:05 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ void border(const std::string &title, const char *colour)
 	<< RESET << std::endl;
 }
 
-#include <cstdlib>
+
+#include <cstdlib> // std::rand()
 int main()
 {
-	// my own test
+	// ==================================================================
+	// |                       my own tests								|
+	// ==================================================================
 	# if 0
 	{
 		try 
@@ -152,7 +155,11 @@ int main()
 	return 0;
 	#endif
 
-	// evaluations's given main.cpp
+
+
+	// ===========================================================================
+	// |						evaluation sheet's given test                    |
+	// ===========================================================================
 	#if 1
 		#define MAX_VAL 750
 		
