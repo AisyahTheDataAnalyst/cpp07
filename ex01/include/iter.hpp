@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 09:37:07 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/11/10 20:59:43 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 11:27:37 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void charIsAlpha(const T c)
 }
 
 template <typename T>
-// specifically for checking in string of numbers
+// specifically for checking string of digits, not designed for interger 
 void charIsDigit(const T c)
 {
 	if (!std::isdigit(static_cast<unsigned char>(c)))

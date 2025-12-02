@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:11:41 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/01 23:55:56 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:55:01 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,11 @@ Array<T>::Array(unsigned int n)
 template <typename T>
 Array<T>::Array(const Array &other)
 : _arr(new T[other.size()]) , _size(other.size())
-{}
+{
+	if (this->_size)
+		for (size_t i = 0; i < this->_size; ++i)
+			this->_arr[i] = other._arr[i];
+}
 
 // no need to do a const obj version, system&compiler will give error even before compiling
 // name: subscript operator
@@ -107,6 +111,10 @@ Array<T> &Array<T>::operator=(const Array<T> &other)
 		delete [] this->_arr;
 		this->_arr = new T[other.size()];
 		this->_size = other.size();
+
+		if (this->_size)
+			for (size_t i = 0; i < this->_size; ++i)
+				this->_arr[i] = other._arr[i];
 	}
 	return *this;
 }

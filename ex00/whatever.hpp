@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:52 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 00:15:42 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:14:40 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void swap(T& a, T& b)
 }
 
 // no need to make a different version of non-const for max/min
-// this version is usable for both const & non-const objs & mix const objs
+// this version is usable for all 3 const & non-const objs & mix const objs
 
 template <typename Z>
 const Z& min(const Z& a, const Z& b)

@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:34 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 01:22:49 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:16:35 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,6 +193,16 @@ int main(void)
 		std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 		std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
+		/*
+			Expected Output:
+			a = 3, b = 2
+			min(a, b) = 2
+			max(a, b) = 3
+			c = chaine2, d = chaine1
+			min(c, d) = chaine1
+			max(c, d) = chaine2
+		*/
+		
 	}
 	return 0;
 }
