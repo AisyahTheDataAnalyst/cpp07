@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:34 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 10:16:35 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:05:34 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,35 @@ void border(const std::string &title, const char *colour)
 	<< RESET << std::endl;
 }
 
+
+/*
+	MEANING:
+	
+	✅ template
+	template tells the compiler:
+	“I am defining a blueprint, not a normal function/class.
+	This blueprint can generate code for many types.”
+
+	✅ typename
+	typename tells the compiler:
+	“The identifier T is a type, not a variable or something else.”
+
+	template		=	introduces a template
+	<typename T>	=	declares a type parameter
+
+
+	
+	WRITING:
+	
+	TEMPLATED CLASS
+		Inside a templated class, you don’t repeat template <typename T> because the class already introduced T.
+		when defining the function outside the class, you must repeat the template for every templated function
+		
+	TEMPLATED FUNCTION
+	🛑 You cannot write template once only at the top of a file, and all the templated functions below it
+		That doesn’t work because each function is its own separate template definition.
+		Every template needs its own parameter list.
+*/
 
 
 // ==================================================================
