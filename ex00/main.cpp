@@ -6,7 +6,7 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 06:47:34 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 13:05:34 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 19:42:16 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int main()
 		<< "Before swapping\n"
 		<< "a: " << a << '\n'
 		<< "b: " << b << '\n';
-		swap(a, b);
+		::swap(a, b);
 		std::cout
 		<< "After swapping\n"
 		<< "a: " << a << '\n' 
@@ -102,7 +102,7 @@ int main()
 		<< "Before swapping\n"
 		<< "a: " << a << '\n'
 		<< "b: " << b << '\n';
-		swap(a, b);
+		::swap(a, b);
 		std::cout
 		<< "After swapping\n"
 		<< "a: " << a << '\n' 

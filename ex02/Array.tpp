@@ -6,9 +6,12 @@
 /*   By: aimokhta <aimokhta@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 12:49:50 by aimokhta          #+#    #+#             */
-/*   Updated: 2025/12/02 12:57:36 by aimokhta         ###   ########.fr       */
+/*   Updated: 2025/12/02 19:41:06 by aimokhta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ARRAY_TPP
+# define ARRAY_TPP
 
 /*
 
@@ -36,7 +39,7 @@
 
 template<typename T>
 Array<T>::Array()
-: _arr(new T[0]), _size(0)
+: _arr(new T[0]()), _size(0)
 {}
 
 // unsigned int (32-bit on most systems).
@@ -55,13 +58,13 @@ Array<T>::Array(unsigned int n)
 {
 	if (static_cast<uint64_t>(n) * sizeof(T) > SIZE_MAX)
 		throw std::length_error("Size is too big for type T");
-	this->_arr = new T[n];
+	this->_arr = new T[n]();
 	this->_size = n;
 }
 
 template <typename T>
 Array<T>::Array(const Array &other)
-: _arr(new T[other.size()]) , _size(other.size())
+: _arr(new T[other.size()]()) , _size(other.size())
 {
 	if (this->_size)
 		for (size_t i = 0; i < this->_size; ++i)
@@ -76,7 +79,7 @@ Array<T> &Array<T>::operator=(const Array<T> &other)
 	if (this != &other)
 	{
 		delete [] this->_arr;
-		this->_arr = new T[other.size()];
+		this->_arr = new T[other.size()]();
 		this->_size = other.size();
 
 		if (this->_size)
@@ -101,21 +104,8 @@ Array<T>::~Array()
 // not anymore in C++ since we have a lot of helpful member functions like str.size() / str.length()
 // so use the size to indicate index validity
 template <typename T>
-T &Array<T>::operator[](size_t index)
+T &Array<T>::operator[](size_t index) const
 {
-	if (!this->_size)
-		throw std::out_of_range("This array is empty with size of 0");
-	if (index >= this->_size)
-		throw std::out_of_range("Index is out of bounds");
-	return this->_arr[index];
-}
-
-// return type forces that the char/int returned in immodifyable
-template <typename T>
-const T &Array<T>::operator[](size_t index) const
-{
-	if (!this->_size)
-		throw std::out_of_range("This array is empty with size of 0");
 	if (index >= this->_size)
 		throw std::out_of_range("Index is out of bounds");
 	return this->_arr[index];
@@ -127,12 +117,4 @@ size_t Array<T>::size() const
 	return this->_size;
 }
 
-// template <typename T>
-// void Array<T>::setElement(size_t index, T element)
-// {
-// 	if (!this->_size)
-// 		throw std::out_of_range("This array is empty with size of 0");
-// 	if (index >= this->_size)
-// 		throw std::out_of_range("Index is out of bounds");
-// 	this->_array[index] = element;
-// }
+#endif
